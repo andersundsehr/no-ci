@@ -1,0 +1,47 @@
+{
+  "name" : "andersundsehr/no-ci",
+  "description" : "composer @no-ci addon",
+  "type" : "composer-plugin",
+  "license" : "GPL-2.0-or-later",
+  "autoload" : {
+    "psr-4" : {
+      "AUS\\NoCi\\" : "src/"
+    }
+  },
+  "authors" : [
+    {
+      "name" : "Matthias Vogel",
+      "email" : "m.vogel@andersundsehr.com"
+    }
+  ],
+  "scripts" : {
+    "test": "@no-ci @php -v"
+  },
+  "require" : {
+    "composer-plugin-api" : "^2.0",
+    "ondram/ci-detector": "^4.1",
+    "php": "^7.3 || ^8.0"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0",
+    "pluswerk/grumphp-config": "^5"
+  },
+  "extra": {
+    "class": "AUS\\NoCi\\Plugin",
+    "pluswerk/grumphp-config": {
+      "auto-setting": true
+    },
+    "grumphp": {
+      "config-default-path": "vendor/pluswerk/grumphp-config/grumphp.yml"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true,
+      "phpro/grumphp": true,
+      "phpstan/extension-installer": true,
+      "pluswerk/grumphp-config": true
+    }
+  }
+}
