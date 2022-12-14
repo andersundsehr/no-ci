@@ -4,7 +4,7 @@
 
 ``composer req andersundsehr/no-ci``
 
-## what dose it do
+## what does it do
 
 This plugin adds the possibility to add `@no-ci`/`@ci` to any composer script.  
 you can Add it in front of every possible composer script. [documentation](https://getcomposer.org/doc/articles/scripts.md#writing-custom-commands)
