@@ -29,3 +29,11 @@ you can Add it in front of every possible composer script. [documentation](https
   }
 }
 ````
+
+# with ♥️ from anders und sehr GmbH
+
+> If something did not work 😮  
+> or you appreciate this Extension 🥰 let us know.
+
+> We are hiring https://www.andersundsehr.com/karriere/
+
