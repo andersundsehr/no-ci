@@ -28,6 +28,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
             $event->getIO()->write('<warning>CI detected, skipping: ' . implode(' ', $event->getArguments()) . '</warning>');
             return;
         }
+
         $this->runOriginalScript($event);
     }
 
@@ -37,6 +38,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
             $event->getIO()->write('<warning>no CI detected, skipping: ' . implode(' ', $event->getArguments()) . '</warning>');
             return;
         }
+
         $this->runOriginalScript($event);
     }
 
@@ -48,6 +50,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         if (!$dispatcher->hasEventListeners($childEvent)) {
             $dispatcher->addListener($eventName, implode(' ', $event->getArguments()));
         }
+
         $dispatcher->dispatch(null, $childEvent);
     }
 
