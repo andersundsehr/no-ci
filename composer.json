@@ -1,47 +1,42 @@
 {
-  "name" : "andersundsehr/no-ci",
-  "description" : "composer @no-ci addon",
-  "type" : "composer-plugin",
-  "license" : "GPL-2.0-or-later",
-  "autoload" : {
-    "psr-4" : {
-      "AUS\\NoCi\\" : "src/"
-    }
-  },
-  "authors" : [
+  "name": "andersundsehr/no-ci",
+  "description": "composer @no-ci addon",
+  "license": "GPL-2.0-or-later",
+  "type": "composer-plugin",
+  "authors": [
     {
-      "name" : "Matthias Vogel",
-      "email" : "m.vogel@andersundsehr.com"
+      "name": "Matthias Vogel",
+      "email": "m.vogel@andersundsehr.com"
     }
   ],
-  "scripts" : {
-    "test": "@no-ci @php -v"
-  },
-  "require" : {
-    "composer-plugin-api" : "^2.0",
-    "ondram/ci-detector": "^4.1",
-    "php": "^7.3 || ^8.0"
+  "require": {
+    "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+    "composer-plugin-api": "^2.0",
+    "ondram/ci-detector": "^4.2.0"
   },
   "require-dev": {
-    "composer/composer": "^2.0",
-    "pluswerk/grumphp-config": "^5"
+    "composer/composer": "^2.9.2",
+    "pluswerk/grumphp-config": "^10.2.1"
   },
-  "extra": {
-    "class": "AUS\\NoCi\\Plugin",
-    "pluswerk/grumphp-config": {
-      "auto-setting": true
-    },
-    "grumphp": {
-      "config-default-path": "vendor/pluswerk/grumphp-config/grumphp.yml"
+  "autoload": {
+    "psr-4": {
+      "AUS\\NoCi\\": "src/"
     }
   },
   "config": {
     "allow-plugins": {
-      "typo3/cms-composer-installers": true,
-      "typo3/class-alias-loader": true,
+      "ergebnis/composer-normalize": true,
       "phpro/grumphp": true,
       "phpstan/extension-installer": true,
-      "pluswerk/grumphp-config": true
+      "pluswerk/grumphp-config": true,
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
     }
+  },
+  "extra": {
+    "class": "AUS\\NoCi\\Plugin"
+  },
+  "scripts": {
+    "test": "@no-ci @php -v"
   }
 }
