@@ -25,6 +25,7 @@
   },
   "config": {
     "allow-plugins": {
+      "a9f/fractor-extension-installer": true,
       "ergebnis/composer-normalize": true,
       "phpro/grumphp": true,
       "phpstan/extension-installer": true,
